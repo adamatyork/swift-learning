@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/* Optionals allow you to wrap a value type in Optional type, which can have a nil value */
+
+// Regular value type string
+var a: String = "" // this is valid 
+//var b: String = nil // this is not
+
+// Optional string which can be nil.
+var c: String? = "" // This is valid
+var d: String? = nil // so is this
+
+/* 
+ This 'String?' is syntactic sugar for 'Optional&lt;String&gt;'.
+ To access the actual value of an optional, we need to unwrap it.
+ We do this with '!' operator if we know for certain that it has a value, or '?' if we want to check for nil first.
+ */
+
+c = "Hiyaaaaa"
+
+print(c) // prints the optional itself
+print(c!) // prints our value!
+
+    /* We can guard against nil optionals */
+var wrapped: String? = nil
+wrapped = "Hwllo, Wrld"
+
+guard let unwrapped = wrapped else {
+    print("Nil!")
+    throw fatalError()
+}
+
+print(unwrapped)
+
+
+    /* You can 'nil-coalesce' an optional */
+
+var nilString: String? = nil
+let copy = nilString ?? "Hello"
+
+// Prints 'Hello' because nilString is nil
+print(copy)
+
+nilString = "Yolo"
+let newCopy = nilString ?? "Hello"
+    
+// Prints 'Yolo' because nilString had that value
+print(newCopy)
+
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1133}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
