@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/* In Swift, classes are reference types. */
+
+class MyClass {
+    var myProperty: String = "OriginalValue"
+}
+
+var a = MyClass()
+var b = a
+
+// Both will be 'OriginalValue'
+print(a.myProperty)
+print(b.myProperty)
+
+a.myProperty = "Hello, World!"
+
+// Both will be 'Hello, World!'
+print(a.myProperty)
+print(b.myProperty)
+
+b.myProperty = "Yolo"
+
+// Both will be 'Yolo'
+print(a.myProperty)
+print(b.myProperty)
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 404}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

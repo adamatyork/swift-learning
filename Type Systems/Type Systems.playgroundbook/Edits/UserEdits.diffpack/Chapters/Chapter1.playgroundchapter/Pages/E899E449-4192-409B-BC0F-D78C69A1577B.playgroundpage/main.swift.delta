@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/* in Swift, Structs and Strings are Value types. */
+
+struct MyStruct {
+    var myProperty: String = "OriginalValue"
+}
+
+var a = MyStruct()
+var b = a
+
+// Both will be 'OriginalValue'
+print(a.myProperty)
+print(b.myProperty)
+
+b.myProperty = "Hello, World!"
+
+// A's property remains unchanged
+print(a.myProperty)
+print(b.myProperty)
+
+a.myProperty = "Yolo"
+
+// B's property remains unchanged
+print(a.myProperty)
+print(b.myProperty)
+
+
+/* In C#, Strings are reference types. If you copy a string in a new var and modify that new var, you also modify the original. 
+ 
+ This is not the case in Swift where strings are value types. */
+
+var s: String = "Hello"
+var d = s
+
+d = "Yolo"
+
+// S remains unchanged
+print(s)
+print(d)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 714}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
