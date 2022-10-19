@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>extension Int {
+    
+    public func double() -&gt; Int { return multiply(2) }
+    public func triple() -&gt; Int { return multiply(3) }
+    public func square() -&gt; Int { return multiply(self)}
+    
+    private func multiply(_ operand: Int) -&gt; Int {
+        return self * operand
+    }
+}
+
+var i = 10
+
+print(i)
+print(i.double())
+print(i.triple())
+print(i.square())
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 360}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

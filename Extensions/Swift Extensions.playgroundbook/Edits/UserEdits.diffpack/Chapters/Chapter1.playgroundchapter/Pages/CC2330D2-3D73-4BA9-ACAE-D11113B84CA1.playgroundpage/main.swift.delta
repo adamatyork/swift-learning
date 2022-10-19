@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/* 
+ Say we have a List, and we want to iterate over an array of items of a type we do not have the source for.
+ We will get an error saying '...requires X to conform to protocol 'Identifiable'.
+ 
+ We don't have the souce for the type so we cant force it to implement Identifiable.
+ Or can we?
+ */
+
+import SwiftUI
+
+// Playgrounds should show an error on line 'List'.
+struct MainView: View {
+    
+    var items: [String] = ["Hiya", "Hi", "Yo"]
+    public var body: some View {
+        
+        List(items) { value in 
+            Text(value)
+        }
+    }
+}
+
+/* Uncomment the following to resolve the error!
+ 
+ Here we extend String and force it to implement Identifiable.
+ Identifiable requires that sub classes have an 'id' property that is public.
+ It can be of any type, it just needs to be unique. 
+ Here we are using the string itself as its own identifier.
+ 
+ */
+
+/*
+extension String: Identifiable {
+    public var id: String {
+        return self
+    }
+} */
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 967}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
