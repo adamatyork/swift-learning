@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>extension Collection where Element == String {
+    
+    func reverseValues() -&gt; [String] {
+        var reversed: [String] = []
+        
+        for value in self { 
+            reversed.append(String(value.reversed()))
+        }
+        
+        return reversed
+    }
+}
+
+var names = ["Adam", "Lacey", "Alison"]
+var reverseNames = names.reverseValues()
+
+
+for name in reverseNames {
+    if name.isEmpty {
+        print("fail")
+    }
+    print(name)
+}
+
+class Player {
+    let name: String
+    var gameTime: Int = 0
+    
+    init(_ name: String) {
+        self.name = name
+    }
+    
+    func increaseGameTimeBy(time: Int) {
+        gameTime += time
+    }
+    
+    func decreaseGameTimeBy(time: Int) {
+        gameTime -= time
+    }
+}
+
+extension Collection where Element == Player {
+    func getLongestPlayer() -&gt; Player? {
+        return self.max(by: { $0.gameTime &lt; $1.gameTime})
+    }
+}
+
+var playerOne = Player("Adam")
+playerOne.increaseGameTimeBy(time: 300)
+
+var playerTwo = Player("Lacey")
+playerTwo.increaseGameTimeBy(time: 250)
+
+var players: [Player] = [playerOne, playerTwo]
+var highest = players.getLongestPlayer()?.name ?? "Nobody played."
+
+print(highest)
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1163}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
